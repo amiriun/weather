@@ -15,9 +15,9 @@ class BBCRepository extends AbstractWeatherProviderRepository
     private $rawData;
 
     /**
-     * @var Collection
+     * @var array
      */
-    private $dataObject;
+    private $dataArray;
 
     /**
      * @return DegreeItemDTO[]
@@ -39,7 +39,7 @@ class BBCRepository extends AbstractWeatherProviderRepository
     private function collectData(): void
     {
         $value = json_decode($this->rawData);
-        $this->dataObject = collect($value->predictions->prediction);
+        $this->dataArray = $value->predictions->prediction;
     }
 
     /**
@@ -48,7 +48,7 @@ class BBCRepository extends AbstractWeatherProviderRepository
     private function decorateData()
     {
         $degreeItemDTO = [];
-        foreach ($this->dataObject as $item){
+        foreach ($this->dataArray as $item){
             $DTO = new DegreeItemDTO();
             $DTO->hour = (int)str_replace(':00', '', $item->time);
             $DTO->degree = new Fahrenheit($item->value);
