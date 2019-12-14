@@ -1,5 +1,5 @@
 <?php
-namespace App\Services;
+namespace App\Services\Degrees;
 
 abstract class AbstractDegree
 {

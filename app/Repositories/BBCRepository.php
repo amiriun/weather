@@ -2,7 +2,7 @@
 namespace App\Repositories;
 
 use App\Contracts\DegreeInterface;
-use App\Services\Fahrenheit;
+use App\Services\Degrees\Fahrenheit;
 
 class BBCRepository extends AbstractWeatherProviderRepository
 {

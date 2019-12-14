@@ -2,7 +2,7 @@
 namespace App\Repositories;
 
 use App\Contracts\DegreeInterface;
-use App\Services\Celsius;
+use App\Services\Degrees\Celsius;
 
 class AmsterdamRepository extends AbstractWeatherProviderRepository
 {
