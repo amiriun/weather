@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services\Degrees;
 
 use App\Contracts\DegreeInterface;
@@ -7,7 +8,7 @@ class Fahrenheit extends AbstractDegree implements DegreeInterface
 {
     public function toCelsius(): int
     {
-        // TODO: Implement toCelsius() method.
+        return ($this->amount - 32) * 5.9;
     }
 
     public function toFahrenheit(): int

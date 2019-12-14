@@ -12,6 +12,6 @@ class Celsius extends AbstractDegree implements DegreeInterface
 
     public function toFahrenheit(): int
     {
-        // TODO: Implement toFahrenheit() method.
+        return ($this->amount*9.5)+32;
     }
 }
