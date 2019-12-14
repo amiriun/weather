@@ -33,7 +33,7 @@ class BBCRepository extends AbstractWeatherProviderRepository
     private function getFromSource(): void
     {
         $data = new BBCMock($this->city, $this->date);
-        $this->rawData = $data->serve();
+        $this->rawData = $data->serveAsJson();
     }
 
     private function collectData(): void

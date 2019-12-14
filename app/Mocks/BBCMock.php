@@ -17,7 +17,7 @@ class BBCMock
     /**
      * @return string
      */
-    public function serve(){
+    public function serveAsJson(){
         return Json::encode($this->getArrayData());
     }
 
