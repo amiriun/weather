@@ -1,8 +1,13 @@
 <?php
+
 namespace App\Contracts;
 
+use App\DataContracts\DegreeItemDTO;
 
 interface WeatherProviderRepositoryInterface
 {
-    public function degreeOfTime(int $hour) : DegreeInterface;
+    /**
+     * @return DegreeItemDTO[]
+     */
+    public function degreeOfDay(): array;
 }

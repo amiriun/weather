@@ -2,11 +2,16 @@
 namespace App\Repositories;
 
 use App\Contracts\DegreeInterface;
+use App\DataContracts\DegreeItemDTO;
 use App\Services\Degrees\Fahrenheit;
+use Illuminate\Support\Collection;
 
 class WeatherDotComRepository extends AbstractWeatherProviderRepository
 {
-    public function degreeOfTime(int $hour): DegreeInterface
+    /**
+     * @return DegreeItemDTO[]
+     */
+    public function degreeOfDay(): array
     {
         return new Fahrenheit(10);
     }

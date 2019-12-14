@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Contracts\DegreeInterface;
+use App\DataContracts\DegreeItemDTO;
 use App\Mocks\BBCMock;
 use App\Services\Degrees\Fahrenheit;
 use Illuminate\Support\Collection;
@@ -19,37 +19,43 @@ class BBCRepository extends AbstractWeatherProviderRepository
      */
     private $dataObject;
 
-    public function degreeOfTime(int $hour): DegreeInterface
+    /**
+     * @return DegreeItemDTO[]
+     */
+    public function degreeOfDay(): array
     {
-        $this->getRawData();
-        $this->rawDataToObject();
-        $filteredTime = $this->whereHourEqualTo($hour);
+        $this->getFromSource();
+        $this->collectData();
 
-        return new Fahrenheit($filteredTime->value);
+        return $this->decorateData();
     }
 
-    private function getRawData(): void
+    private function getFromSource(): void
     {
         $data = new BBCMock($this->city, $this->date);
         $this->rawData = $data->serve();
     }
 
-    private function rawDataToObject(): void
+    private function collectData(): void
     {
         $value = json_decode($this->rawData);
         $this->dataObject = collect($value->predictions->prediction);
     }
 
     /**
-     * @param int $hour
-     * @return mixed
+     * @return DegreeItemDTO[]
      */
-    private function whereHourEqualTo(int $hour): mixed
+    private function decorateData()
     {
-        return $this->dataObject->filter(
-            function ($item) use ($hour) {
-                return $item->time == $this->hourFormat($hour);
-            }
-        )->first();
+        $degreeItemDTO = [];
+        foreach ($this->dataObject as $item){
+            $DTO = new DegreeItemDTO();
+            $DTO->hour = (int)str_replace(':00', '', $item->time);
+            $DTO->degree = new Fahrenheit($item->value);
+
+            $degreeItemDTO[] = $DTO;
+        }
+
+        return $degreeItemDTO;
     }
 }
