@@ -3,13 +3,20 @@
 namespace App\Repositories;
 
 use App\Contracts\WeatherProviderRepositoryInterface;
+use Carbon\Carbon;
 
 abstract class AbstractWeatherProviderRepository  implements WeatherProviderRepositoryInterface
 {
-    protected $rawData;
+    /**
+     * @var Carbon
+     */
+    protected $date;
 
-    public function __construct(string $rawData)
+    protected $city;
+
+    public function __construct(string $city, Carbon $date)
     {
-        $this->rawData = $rawData;
+        $this->date = $date;
+        $this->city = $city;
     }
 }

@@ -1,7 +1,6 @@
 <?php
 namespace App\Contracts;
 
-use App\Services\AbstractDegree;
 
 interface WeatherProviderRepositoryInterface
 {
