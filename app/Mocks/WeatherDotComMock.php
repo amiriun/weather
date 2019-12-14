@@ -8,6 +8,8 @@ class WeatherDotComMock
 {
     private $date;
 
+    private $city;
+
     public function __construct(string $city, Carbon $date)
     {
         $this->date = $date;
