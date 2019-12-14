@@ -1,8 +1,10 @@
 <?php
 namespace App\Repositories;
 
-use App\Contracts\WeatherProviderRepositoryInterface;
-
-class BBCProviderRepository extends AbstractWeatherProviderRepository implements WeatherProviderRepositoryInterface
+class BBCProviderRepository extends AbstractWeatherProviderRepository
 {
+    public function getDegreeType(): string
+    {
+        return self::TYPE_FAHRENHEIT;
+    }
 }

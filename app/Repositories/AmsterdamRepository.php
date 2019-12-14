@@ -1,8 +1,10 @@
 <?php
 namespace App\Repositories;
 
-use App\Contracts\WeatherProviderRepositoryInterface;
-
-class AmsterdamRepository extends AbstractWeatherProviderRepository implements WeatherProviderRepositoryInterface
+class AmsterdamRepository extends AbstractWeatherProviderRepository
 {
+    public function getDegreeType(): string
+    {
+        return self::TYPE_CELSIUS;
+    }
 }
