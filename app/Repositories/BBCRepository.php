@@ -1,7 +1,7 @@
 <?php
 namespace App\Repositories;
 
-class BBCProviderRepository extends AbstractWeatherProviderRepository
+class BBCRepository extends AbstractWeatherProviderRepository
 {
     public function getDegreeType(): string
     {
