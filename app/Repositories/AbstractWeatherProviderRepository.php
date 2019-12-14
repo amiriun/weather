@@ -19,4 +19,12 @@ abstract class AbstractWeatherProviderRepository  implements WeatherProviderRepo
         $this->date = $date;
         $this->city = $city;
     }
+
+    protected function hourFormat($hour){
+        if($hour < 10){
+            return "0"."{$hour}:00";
+        }
+
+        return "{$hour}:00";
+    }
 }
