@@ -1,11 +1,9 @@
 <?php
 namespace App\Contracts;
 
-use App\Services\DegreeConverter;
+use App\Services\AbstractDegree;
 
 interface WeatherProviderRepositoryInterface
 {
-    public function degreeOfTime(int $hour) : DegreeConverter;
-
-    public function getDegreeType() : string;
+    public function degreeOfTime(int $hour) : DegreeInterface;
 }

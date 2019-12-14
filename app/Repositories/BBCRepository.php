@@ -1,10 +1,13 @@
 <?php
 namespace App\Repositories;
 
+use App\Contracts\DegreeInterface;
+use App\Services\Fahrenheit;
+
 class BBCRepository extends AbstractWeatherProviderRepository
 {
-    public function getDegreeType(): string
+    public function degreeOfTime(int $hour): DegreeInterface
     {
-        return self::TYPE_FAHRENHEIT;
+        return new Fahrenheit(10);
     }
 }

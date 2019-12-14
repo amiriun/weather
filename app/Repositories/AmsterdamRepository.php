@@ -1,10 +1,13 @@
 <?php
 namespace App\Repositories;
 
+use App\Contracts\DegreeInterface;
+use App\Services\Celsius;
+
 class AmsterdamRepository extends AbstractWeatherProviderRepository
 {
-    public function getDegreeType(): string
+    public function degreeOfTime(int $hour): DegreeInterface
     {
-        return self::TYPE_CELSIUS;
+        return new Celsius(10);
     }
 }
