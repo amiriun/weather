@@ -13,3 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('v_1_0/en/weather/{city}','ShowWeatherController@show');
