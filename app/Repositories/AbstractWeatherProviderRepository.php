@@ -10,9 +10,9 @@ abstract class AbstractWeatherProviderRepository  implements WeatherProviderRepo
     /**
      * @var Carbon
      */
-    protected $date;
+    public $date;
 
-    protected $city;
+    public $city;
 
     public function __construct(string $city, Carbon $date)
     {
