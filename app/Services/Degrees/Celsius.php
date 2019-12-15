@@ -1,9 +1,7 @@
 <?php
 namespace App\Services\Degrees;
 
-use App\Contracts\DegreeInterface;
-
-class Celsius extends AbstractDegree implements DegreeInterface
+class Celsius extends AbstractDegree
 {
     public function toCelsius(): int
     {

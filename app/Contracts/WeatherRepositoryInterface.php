@@ -12,7 +12,7 @@ use Carbon\Carbon;
  * @property string city
  * @property Carbon date
  */
-interface WeatherProviderRepositoryInterface
+interface WeatherRepositoryInterface
 {
     /**
      * @return DegreeItemDTO[]

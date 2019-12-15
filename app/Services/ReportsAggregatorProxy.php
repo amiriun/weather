@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Contracts\ReportsAggregatorInterface;
-use App\Contracts\WeatherProviderRepositoryInterface;
+use App\Contracts\WeatherRepositoryInterface;
 use Illuminate\Support\Arr;
 
 class ReportsAggregatorProxy implements ReportsAggregatorInterface
@@ -15,7 +15,7 @@ class ReportsAggregatorProxy implements ReportsAggregatorInterface
     /**
      * ReportAggregatorProxy constructor.
      *
-     * @param WeatherProviderRepositoryInterface[] $repositories
+     * @param WeatherRepositoryInterface[] $repositories
      * @param int $cacheInMinutes
      */
     public function __construct($repositories,$cacheInMinutes = 1)

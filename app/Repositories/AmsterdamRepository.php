@@ -5,7 +5,7 @@ use App\DataContracts\DegreeItemDTO;
 use App\Mocks\AmsterdamMock;
 use App\Services\Degrees\Celsius;
 
-class AmsterdamRepository extends AbstractWeatherProviderRepository
+class AmsterdamRepository extends AbstractWeatherRepository
 {
     private $rawData;
 

@@ -2,10 +2,10 @@
 
 namespace App\Repositories;
 
-use App\Contracts\WeatherProviderRepositoryInterface;
+use App\Contracts\WeatherRepositoryInterface;
 use Carbon\Carbon;
 
-abstract class AbstractWeatherProviderRepository  implements WeatherProviderRepositoryInterface
+abstract class AbstractWeatherRepository  implements WeatherRepositoryInterface
 {
     /**
      * @var Carbon

@@ -1,7 +1,9 @@
 <?php
 namespace App\Services\Degrees;
 
-abstract class AbstractDegree
+use App\Contracts\DegreeInterface;
+
+abstract class AbstractDegree implements DegreeInterface
 {
     protected $amount;
 

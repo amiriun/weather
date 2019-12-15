@@ -3,24 +3,24 @@
 namespace App\Services;
 
 use App\Contracts\ReportsAggregatorInterface;
-use App\Contracts\WeatherProviderRepositoryInterface;
+use App\Contracts\WeatherRepositoryInterface;
 use App\DataContracts\DegreeItemDTO;
 
 class ReportsAggregator implements ReportsAggregatorInterface
 {
     /**
-     * @var WeatherProviderRepositoryInterface[]
+     * @var WeatherRepositoryInterface[]
      */
     private $repositories;
 
     /**
      * ReportAggregator constructor.
      *
-     * @param WeatherProviderRepositoryInterface[] ...$weatherRepositories
+     * @param WeatherRepositoryInterface[] $repositories
      */
-    public function __construct($weatherRepositories)
+    public function __construct($repositories)
     {
-        $this->repositories = $weatherRepositories;
+        $this->repositories = $repositories;
     }
 
     /**
@@ -36,7 +36,7 @@ class ReportsAggregator implements ReportsAggregatorInterface
         }
 
         foreach ($result->groupBy('hour') as $hour=> $dailyDegreeItems) {
-            $averageList[$hour] = $this->getAverageDegree($dailyDegreeItems, $degreeType);
+            $averageList[$hour] = $this->calculateAverage($dailyDegreeItems, $degreeType);
         }
 
         return $averageList;
@@ -48,7 +48,7 @@ class ReportsAggregator implements ReportsAggregatorInterface
      *
      * @return int
      */
-    private function getAverageDegree($items,$degreeType) : int
+    private function calculateAverage($items,$degreeType) : int
     {
         $sum = 0;
         foreach ($items as $item) {

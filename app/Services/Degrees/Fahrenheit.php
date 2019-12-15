@@ -2,9 +2,7 @@
 
 namespace App\Services\Degrees;
 
-use App\Contracts\DegreeInterface;
-
-class Fahrenheit extends AbstractDegree implements DegreeInterface
+class Fahrenheit extends AbstractDegree
 {
     public function toCelsius(): int
     {

@@ -7,9 +7,9 @@ class CSV
 {
     private $data;
 
-    public function __construct($string)
+    public function __construct($data)
     {
-        $this->data = $string;
+        $this->data = $data;
 
         return $this;
     }

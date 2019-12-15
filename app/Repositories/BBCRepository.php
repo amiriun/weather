@@ -6,7 +6,7 @@ use App\DataContracts\DegreeItemDTO;
 use App\Mocks\BBCMock;
 use App\Services\Degrees\Fahrenheit;
 
-class BBCRepository extends AbstractWeatherProviderRepository
+class BBCRepository extends AbstractWeatherRepository
 {
     /**
      * @var string

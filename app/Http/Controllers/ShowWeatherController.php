@@ -33,7 +33,7 @@ class ShowWeatherController extends Controller
                 new AmsterdamRepository($city, $this->DTO->date),
             ];
             $reportAggregatorProxy = new ReportsAggregatorProxy($repositories, $cacheTimeInMinute);
-            $average = $reportAggregatorProxy->average($this->getDegreeType());
+            $average = $reportAggregatorProxy->average($this->specifyDegreeType());
         } catch (\Exception $e) {
             abort(422,'Problem was occured');
         } catch (InvalidArgumentException $e) {
@@ -46,7 +46,7 @@ class ShowWeatherController extends Controller
     /**
      * @return string
      */
-    private function getDegreeType()
+    private function specifyDegreeType()
     {
         if($this->DTO->degreeType == strtolower(DegreeTypes::CELSIUS)){
             return DegreeTypes::CELSIUS;

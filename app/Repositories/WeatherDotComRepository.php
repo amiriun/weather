@@ -6,7 +6,7 @@ use App\Mocks\WeatherDotComMock;
 use App\Services\CSV;
 use App\Services\Degrees\Celsius;
 
-class WeatherDotComRepository extends AbstractWeatherProviderRepository
+class WeatherDotComRepository extends AbstractWeatherRepository
 {
     private $rawData;
 
