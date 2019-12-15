@@ -5,7 +5,6 @@ namespace App\Repositories;
 use App\DataContracts\DegreeItemDTO;
 use App\Mocks\BBCMock;
 use App\Services\Degrees\Fahrenheit;
-use Illuminate\Support\Collection;
 
 class BBCRepository extends AbstractWeatherProviderRepository
 {
@@ -25,7 +24,7 @@ class BBCRepository extends AbstractWeatherProviderRepository
     public function degreeOfDay(): array
     {
         $this->getFromSource();
-        $this->collectData();
+        $this->collectDataFromJson();
 
         return $this->decorateData();
     }
@@ -36,7 +35,7 @@ class BBCRepository extends AbstractWeatherProviderRepository
         $this->rawData = $data->serveAsJson();
     }
 
-    private function collectData(): void
+    private function collectDataFromJson(): void
     {
         $value = json_decode($this->rawData);
         $this->dataArray = $value->predictions->prediction;

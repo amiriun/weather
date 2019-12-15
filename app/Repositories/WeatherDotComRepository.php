@@ -21,7 +21,7 @@ class WeatherDotComRepository extends AbstractWeatherProviderRepository
     public function degreeOfDay(): array
     {
         $this->getFromSource();
-        $this->collectData();
+        $this->collectDataFromCSV();
 
         return $this->decorateData();
     }
@@ -32,7 +32,7 @@ class WeatherDotComRepository extends AbstractWeatherProviderRepository
         $this->rawData = $data->serveAsCSV();
     }
 
-    private function collectData()
+    private function collectDataFromCSV()
     {
         $csv = (new CSV($this->rawData));
         $this->dataArray = $csv->toArray();

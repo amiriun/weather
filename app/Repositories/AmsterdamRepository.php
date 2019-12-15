@@ -17,7 +17,7 @@ class AmsterdamRepository extends AbstractWeatherProviderRepository
     public function degreeOfDay(): array
     {
         $this->getFromSource();
-        $this->collectData();
+        $this->collectDataFromXML();
 
         return $this->decorateData();
     }
@@ -28,7 +28,7 @@ class AmsterdamRepository extends AbstractWeatherProviderRepository
         $this->rawData = $data->serveAsXML();
     }
 
-    private function collectData()
+    private function collectDataFromXML()
     {
         $decodedData = (array)simplexml_load_string($this->rawData);
         $this->dataArray = $decodedData['prediction'];
