@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class RestApiTransformer extends JsonResource
+class ShowWeatherTransformer extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,7 +17,7 @@ class RestApiTransformer extends JsonResource
         $items = [];
         foreach ($this->resource as $hour => $temperature) {
             $items[] = [
-                'hour' => $hour,
+                'hour' => $this->humanReadableHour($hour),
                 'temperature' => $temperature,
             ];
         }
@@ -29,5 +29,18 @@ class RestApiTransformer extends JsonResource
                 'messages' => null,
             ],
         ];
+    }
+
+    /**
+     * @param $hour
+     * @return mixed
+     */
+    private function humanReadableHour($hour)
+    {
+        if($hour<10){
+            return "0$hour:00";
+        }
+
+        return "$hour:00";
     }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DataContracts\DegreeTypes;
 use App\Http\Requests\ShowWeatherRequest;
-use App\Http\Resources\RestApiTransformer;
+use App\Http\Resources\ShowWeatherTransformer;
 use App\Repositories\AmsterdamRepository;
 use App\Repositories\BBCRepository;
 use App\Repositories\WeatherDotComRepository;
@@ -22,7 +22,7 @@ class ShowWeatherController extends Controller
 
     /**
      * @param string $city
-     * @return \App\Http\Resources\RestApiTransformer|\Illuminate\Http\Response
+     * @return \App\Http\Resources\ShowWeatherTransformer|\Illuminate\Http\Response
      */
     public function show($city){
         try {
@@ -40,7 +40,7 @@ class ShowWeatherController extends Controller
             abort(422,'Problem was occured');
         }
 
-        return new RestApiTransformer($average);
+        return new ShowWeatherTransformer($average);
     }
 
     /**
