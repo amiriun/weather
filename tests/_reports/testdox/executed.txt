@@ -1,0 +1,39 @@
+Unit\Example
+ [x] Basic test
+
+Feature\Accessability
+ [x] Api is working normally in celsius
+ [x] Api is working normally in fahrenheit
+ [x] Api should not work in invalid degree scale
+ [x] Api should not work in invalid date format
+ [x] Api should not work in past dates
+ [x] Api should have been working till next ten days
+ [x] Api should not work for more than ten days
+ [x] Api degree type parameter is required
+ [x] Api date parameter is required
+
+Feature\CSV
+ [x] Is the csv parser working correctly
+ [x] Is injected data to csv class is null
+
+Feature\DataSource
+ [x] Amsterdam datasource
+ [x] Bbc datasource
+ [x] Weather dot com datasource
+
+Feature\DegreeConverter
+ [x] Celsius to celsius amounts being same
+ [x] Celsius to fahrenheit result
+ [x] Fahrenheit to fahrenheit being same
+ [x] Fahrenheit to celsius result
+
+Feature\ReportsAggregator
+ [x] It should calculate average using fake providers
+ [x] Putting average data into cache at the first time
+ [x] Getting average data from cache since second time
+
+Feature\WeatherRepository
+ [x] Amsterdam repository with fake data
+ [x] Bbc repository with fake data
+ [x] Weather dot com repository with fake data
+

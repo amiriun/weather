@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1576536214">
+  <project timestamp="1576536214">
+    <package name="App\Console">
+      <file name="/var/www/html/scribbr_test/app/Console/Kernel.php">
+        <class name="App\Console\Kernel" namespace="App\Console">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+        </class>
+        <line num="25" type="method" name="schedule" visibility="protected" complexity="1" crap="1" count="25"/>
+        <line num="29" type="stmt" count="25"/>
+        <line num="36" type="method" name="commands" visibility="protected" complexity="1" crap="1" count="25"/>
+        <line num="38" type="stmt" count="25"/>
+        <line num="39" type="stmt" count="25"/>
+        <metrics loc="40" ncloc="18" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </file>
+    </package>
+    <file name="/var/www/html/scribbr_test/app/Contracts/DataSourceInterface.php">
+      <metrics loc="6" ncloc="6" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/scribbr_test/app/Contracts/DegreeInterface.php">
+      <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/scribbr_test/app/Contracts/HTTP/FormRequestContract.php">
+      <metrics loc="17" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/scribbr_test/app/Contracts/ReportsAggregatorInterface.php">
+      <metrics loc="6" ncloc="6" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/scribbr_test/app/Contracts/WeatherRepositoryInterface.php">
+      <metrics loc="29" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="App\DataContracts">
+      <file name="/var/www/html/scribbr_test/app/DataContracts/DegreeItemDTO.php">
+        <class name="App\DataContracts\DegreeItemDTO" namespace="App\DataContracts">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="16" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/DataContracts/DegreeTypes.php">
+        <class name="App\DataContracts\DegreeTypes" namespace="App\DataContracts">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\DataContracts\HTTP">
+      <file name="/var/www/html/scribbr_test/app/DataContracts/HTTP/ShowWeatherDTO.php">
+        <class name="App\DataContracts\HTTP\ShowWeatherDTO" namespace="App\DataContracts\HTTP">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\DataSources">
+      <file name="/var/www/html/scribbr_test/app/DataSources/Amsterdam.php">
+        <class name="App\DataSources\Amsterdam" namespace="App\DataSources">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="20" coveredelements="20"/>
+        </class>
+        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="16" type="stmt" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="23" type="method" name="serveRawData" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="31" type="method" name="getRawData" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="51" type="stmt" count="4"/>
+        <line num="55" type="stmt" count="4"/>
+        <line num="59" type="stmt" count="4"/>
+        <line num="63" type="stmt" count="4"/>
+        <line num="67" type="stmt" count="4"/>
+        <line num="71" type="stmt" count="4"/>
+        <line num="75" type="stmt" count="4"/>
+        <line num="79" type="stmt" count="4"/>
+        <metrics loc="83" ncloc="77" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="20" coveredelements="20"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/DataSources/BBC.php">
+        <class name="App\DataSources\BBC" namespace="App\DataSources">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="29" elements="32" coveredelements="32"/>
+        </class>
+        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="16" type="stmt" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="23" type="method" name="serveRawData" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="24" type="stmt" count="4"/>
+        <line num="30" type="method" name="getArrayData" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="33" type="stmt" count="4"/>
+        <line num="34" type="stmt" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="38" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="50" type="stmt" count="4"/>
+        <line num="51" type="stmt" count="4"/>
+        <line num="54" type="stmt" count="4"/>
+        <line num="55" type="stmt" count="4"/>
+        <line num="58" type="stmt" count="4"/>
+        <line num="59" type="stmt" count="4"/>
+        <line num="62" type="stmt" count="4"/>
+        <line num="63" type="stmt" count="4"/>
+        <line num="66" type="stmt" count="4"/>
+        <line num="67" type="stmt" count="4"/>
+        <line num="70" type="stmt" count="4"/>
+        <line num="71" type="stmt" count="4"/>
+        <line num="74" type="stmt" count="4"/>
+        <line num="75" type="stmt" count="4"/>
+        <line num="78" type="stmt" count="4"/>
+        <line num="79" type="stmt" count="4"/>
+        <metrics loc="84" ncloc="78" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="29" elements="32" coveredelements="32"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/DataSources/WeatherDotCom.php">
+        <class name="App\DataSources\WeatherDotCom" namespace="App\DataSources">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="18" coveredelements="18"/>
+        </class>
+        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="16" type="stmt" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="23" type="method" name="serveRawData" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="31" type="method" name="getRawData" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="34" type="stmt" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="38" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="40" type="stmt" count="4"/>
+        <line num="41" type="stmt" count="4"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="44" type="stmt" count="4"/>
+        <metrics loc="46" ncloc="40" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="18" coveredelements="18"/>
+      </file>
+    </package>
+    <package name="App\Exceptions">
+      <file name="/var/www/html/scribbr_test/app/Exceptions/Handler.php">
+        <class name="App\Exceptions\Handler" namespace="App\Exceptions">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
+        </class>
+        <line num="36" type="method" name="report" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="38" type="stmt" count="6"/>
+        <line num="39" type="stmt" count="6"/>
+        <line num="48" type="method" name="render" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="50" type="stmt" count="6"/>
+        <line num="60" type="method" name="invalidJson" visibility="protected" complexity="1" crap="1" count="6"/>
+        <line num="62" type="stmt" count="6"/>
+        <line num="64" type="stmt" count="6"/>
+        <line num="66" type="stmt" count="6"/>
+        <line num="67" type="stmt" count="6"/>
+        <line num="70" type="stmt" count="6"/>
+        <metrics loc="73" ncloc="41" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers">
+      <file name="/var/www/html/scribbr_test/app/Http/Controllers/Controller.php">
+        <class name="App\Http\Controllers\Controller" namespace="App\Http\Controllers">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="13" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Http/Controllers/ShowWeatherController.php">
+        <class name="App\Http\Controllers\ShowWeatherController" namespace="App\Http\Controllers">
+          <metrics complexity="7" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="9" elements="17" coveredelements="10"/>
+        </class>
+        <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="27" type="method" name="show" visibility="public" complexity="3" crap="4.68" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="43" type="method" name="specifyDegreeType" visibility="private" complexity="3" crap="3.07" count="3"/>
+        <line num="45" type="stmt" count="3"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="0"/>
+        <metrics loc="54" ncloc="47" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="9" elements="17" coveredelements="10"/>
+      </file>
+    </package>
+    <package name="App\Http">
+      <file name="/var/www/html/scribbr_test/app/Http/Kernel.php">
+        <class name="App\Http\Kernel" namespace="App\Http">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="80" ncloc="52" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Middleware">
+      <file name="/var/www/html/scribbr_test/app/Http/Middleware/Authenticate.php">
+        <class name="App\Http\Middleware\Authenticate" namespace="App\Http\Middleware">
+          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="15" type="method" name="redirectTo" visibility="protected" complexity="2" crap="6.00" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <metrics loc="21" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Http/Middleware/CheckForMaintenanceMode.php">
+        <class name="App\Http\Middleware\CheckForMaintenanceMode" namespace="App\Http\Middleware">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="17" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Http/Middleware/EncryptCookies.php">
+        <class name="App\Http\Middleware\EncryptCookies" namespace="App\Http\Middleware">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="17" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Http/Middleware/RedirectIfAuthenticated.php">
+        <class name="App\Http\Middleware\RedirectIfAuthenticated" namespace="App\Http\Middleware">
+          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="18" type="method" name="handle" visibility="public" complexity="2" crap="6.00" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <metrics loc="26" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Http/Middleware/TrimStrings.php">
+        <class name="App\Http\Middleware\TrimStrings" namespace="App\Http\Middleware">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="18" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Http/Middleware/TrustProxies.php">
+        <class name="App\Http\Middleware\TrustProxies" namespace="App\Http\Middleware">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="23" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Http/Middleware/VerifyCsrfToken.php">
+        <class name="App\Http\Middleware\VerifyCsrfToken" namespace="App\Http\Middleware">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="24" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests">
+      <file name="/var/www/html/scribbr_test/app/Http/Requests/ShowWeatherRequest.php">
+        <class name="App\Http\Requests\ShowWeatherRequest" namespace="App\Http\Requests">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="10" coveredelements="10"/>
+        </class>
+        <line num="17" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="19" type="stmt" count="9"/>
+        <line num="27" type="method" name="rules" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="30" type="stmt" count="9"/>
+        <line num="31" type="stmt" count="9"/>
+        <line num="38" type="method" name="getDTO" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="39" type="stmt" count="3"/>
+        <line num="40" type="stmt" count="3"/>
+        <line num="41" type="stmt" count="3"/>
+        <line num="43" type="stmt" count="3"/>
+        <metrics loc="45" ncloc="32" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="10" coveredelements="10"/>
+      </file>
+    </package>
+    <package name="App\Http\Resources">
+      <file name="/var/www/html/scribbr_test/app/Http/Resources/ShowWeatherTransformer.php">
+        <class name="App\Http\Resources\ShowWeatherTransformer" namespace="App\Http\Resources">
+          <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+        </class>
+        <line num="15" type="method" name="toArray" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="17" type="stmt" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="38" type="method" name="humanReadableHour" visibility="private" complexity="2" crap="2" count="3"/>
+        <line num="40" type="stmt" count="3"/>
+        <line num="41" type="stmt" count="3"/>
+        <line num="44" type="stmt" count="3"/>
+        <metrics loc="46" ncloc="36" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+      </file>
+    </package>
+    <package name="App\Providers">
+      <file name="/var/www/html/scribbr_test/app/Providers/AppServiceProvider.php">
+        <class name="App\Providers\AppServiceProvider" namespace="App\Providers">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+        </class>
+        <line num="15" type="method" name="register" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="19" type="stmt" count="25"/>
+        <line num="20" type="stmt" count="25"/>
+        <line num="27" type="method" name="boot" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="30" type="stmt" count="25"/>
+        <metrics loc="31" ncloc="19" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Providers/EventServiceProvider.php">
+        <class name="App\Providers\EventServiceProvider" namespace="App\Providers">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="28" type="method" name="boot" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="30" type="stmt" count="25"/>
+        <line num="33" type="stmt" count="25"/>
+        <metrics loc="34" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Providers/RouteServiceProvider.php">
+        <class name="App\Providers\RouteServiceProvider" namespace="App\Providers">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="12" coveredelements="12"/>
+        </class>
+        <line num="24" type="method" name="boot" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="28" type="stmt" count="25"/>
+        <line num="29" type="stmt" count="25"/>
+        <line num="36" type="method" name="map" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="38" type="stmt" count="25"/>
+        <line num="41" type="stmt" count="25"/>
+        <line num="50" type="method" name="mapApiRoutes" visibility="protected" complexity="1" crap="1" count="25"/>
+        <line num="52" type="stmt" count="25"/>
+        <line num="53" type="stmt" count="25"/>
+        <line num="54" type="stmt" count="25"/>
+        <line num="55" type="stmt" count="25"/>
+        <line num="56" type="stmt" count="25"/>
+        <metrics loc="57" ncloc="29" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="12" coveredelements="12"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Providers/WeatherServiceProvider.php">
+        <class name="App\Providers\WeatherServiceProvider" namespace="App\Providers">
+          <metrics complexity="6" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="52" elements="59" coveredelements="57"/>
+        </class>
+        <line num="25" type="method" name="register" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="27" type="stmt" count="25"/>
+        <line num="28" type="stmt" count="25"/>
+        <line num="29" type="stmt" count="25"/>
+        <line num="30" type="stmt" count="25"/>
+        <line num="31" type="stmt" count="25"/>
+        <line num="33" type="method" name="bindDegreeScales" visibility="private" complexity="1" crap="1" count="25"/>
+        <line num="35" type="stmt" count="25"/>
+        <line num="36" type="stmt" count="25"/>
+        <line num="38" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="25"/>
+        <line num="41" type="stmt" count="25"/>
+        <line num="42" type="stmt" count="25"/>
+        <line num="44" type="stmt" count="4"/>
+        <line num="45" type="stmt" count="25"/>
+        <line num="47" type="stmt" count="25"/>
+        <line num="48" type="stmt" count="25"/>
+        <line num="50" type="stmt" count="4"/>
+        <line num="51" type="stmt" count="25"/>
+        <line num="53" type="stmt" count="25"/>
+        <line num="55" type="method" name="bindAggregatorClass" visibility="private" complexity="1" crap="1.01" count="25"/>
+        <line num="57" type="stmt" count="25"/>
+        <line num="58" type="stmt" count="25"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="61" type="stmt" count="25"/>
+        <line num="63" type="stmt" count="25"/>
+        <line num="65" type="method" name="bindRepositories" visibility="private" complexity="1" crap="1" count="25"/>
+        <line num="67" type="stmt" count="25"/>
+        <line num="68" type="stmt" count="25"/>
+        <line num="70" type="stmt" count="3"/>
+        <line num="72" type="stmt" count="3"/>
+        <line num="73" type="stmt" count="25"/>
+        <line num="75" type="stmt" count="25"/>
+        <line num="76" type="stmt" count="25"/>
+        <line num="78" type="stmt" count="3"/>
+        <line num="80" type="stmt" count="3"/>
+        <line num="81" type="stmt" count="25"/>
+        <line num="83" type="stmt" count="25"/>
+        <line num="84" type="stmt" count="25"/>
+        <line num="86" type="stmt" count="3"/>
+        <line num="88" type="stmt" count="3"/>
+        <line num="89" type="stmt" count="25"/>
+        <line num="91" type="stmt" count="25"/>
+        <line num="93" type="method" name="bindReportAggregators" visibility="private" complexity="1" crap="1" count="25"/>
+        <line num="95" type="stmt" count="25"/>
+        <line num="96" type="stmt" count="25"/>
+        <line num="98" type="stmt" count="5"/>
+        <line num="99" type="stmt" count="25"/>
+        <line num="102" type="stmt" count="25"/>
+        <line num="103" type="stmt" count="25"/>
+        <line num="105" type="stmt" count="3"/>
+        <line num="107" type="stmt" count="3"/>
+        <line num="108" type="stmt" count="3"/>
+        <line num="109" type="stmt" count="3"/>
+        <line num="112" type="stmt" count="3"/>
+        <line num="113" type="stmt" count="25"/>
+        <line num="115" type="stmt" count="25"/>
+        <line num="122" type="method" name="boot" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="124" type="stmt" count="25"/>
+        <metrics loc="125" ncloc="115" classes="1" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="52" elements="59" coveredelements="57"/>
+      </file>
+    </package>
+    <package name="App\Repositories">
+      <file name="/var/www/html/scribbr_test/app/Repositories/AbstractWeatherRepository.php">
+        <class name="App\Repositories\AbstractWeatherRepository" namespace="App\Repositories">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="23" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="25" type="stmt" count="9"/>
+        <line num="26" type="stmt" count="9"/>
+        <line num="27" type="stmt" count="9"/>
+        <line num="28" type="stmt" count="9"/>
+        <metrics loc="28" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Repositories/AmsterdamRepository.php">
+        <class name="App\Repositories\AmsterdamRepository" namespace="App\Repositories">
+          <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="15" coveredelements="15"/>
+        </class>
+        <line num="16" type="method" name="degreeOfDay" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="23" type="method" name="collectDataFromXML" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="26" type="stmt" count="4"/>
+        <line num="27" type="stmt" count="4"/>
+        <line num="32" type="method" name="decorateData" visibility="private" complexity="2" crap="2" count="4"/>
+        <line num="34" type="stmt" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="38" type="stmt" count="4"/>
+        <line num="40" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <metrics loc="44" ncloc="38" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="15" coveredelements="15"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Repositories/BBCRepository.php">
+        <class name="App\Repositories\BBCRepository" namespace="App\Repositories">
+          <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="15" coveredelements="15"/>
+        </class>
+        <line num="21" type="method" name="degreeOfDay" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="23" type="stmt" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="28" type="method" name="collectDataFromJson" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="30" type="stmt" count="4"/>
+        <line num="31" type="stmt" count="4"/>
+        <line num="32" type="stmt" count="4"/>
+        <line num="37" type="method" name="decorateData" visibility="private" complexity="2" crap="2" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="40" type="stmt" count="4"/>
+        <line num="41" type="stmt" count="4"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="4"/>
+        <line num="45" type="stmt" count="4"/>
+        <line num="48" type="stmt" count="4"/>
+        <metrics loc="49" ncloc="40" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="15" coveredelements="15"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Repositories/WeatherDotComRepository.php">
+        <class name="App\Repositories\WeatherDotComRepository" namespace="App\Repositories">
+          <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="15" coveredelements="15"/>
+        </class>
+        <line num="17" type="method" name="degreeOfDay" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="19" type="stmt" count="4"/>
+        <line num="21" type="stmt" count="4"/>
+        <line num="24" type="method" name="collectDataFromCSV" visibility="private" complexity="1" crap="1" count="4"/>
+        <line num="26" type="stmt" count="4"/>
+        <line num="27" type="stmt" count="4"/>
+        <line num="28" type="stmt" count="4"/>
+        <line num="33" type="method" name="decorateData" visibility="private" complexity="2" crap="2" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="38" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="41" type="stmt" count="4"/>
+        <line num="44" type="stmt" count="4"/>
+        <metrics loc="45" ncloc="36" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="15" coveredelements="15"/>
+      </file>
+    </package>
+    <package name="App\Services">
+      <file name="/var/www/html/scribbr_test/app/Services/CSV.php">
+        <class name="App\Services\CSV" namespace="App\Services">
+          <metrics complexity="5" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="15" coveredelements="15"/>
+        </class>
+        <line num="10" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="12" type="stmt" count="7"/>
+        <line num="14" type="stmt" count="7"/>
+        <line num="21" type="method" name="toArray" visibility="public" complexity="4" crap="4" count="7"/>
+        <line num="23" type="stmt" count="7"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="29" type="stmt" count="6"/>
+        <line num="30" type="stmt" count="6"/>
+        <line num="31" type="stmt" count="6"/>
+        <line num="32" type="stmt" count="6"/>
+        <line num="34" type="stmt" count="6"/>
+        <line num="38" type="stmt" count="6"/>
+        <metrics loc="39" ncloc="35" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="15" coveredelements="15"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Services/ReportsAggregator.php">
+        <class name="App\Services\ReportsAggregator" namespace="App\Services">
+          <metrics complexity="6" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="17" coveredelements="17"/>
+        </class>
+        <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="30" type="method" name="average" visibility="public" complexity="3" crap="3" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="5"/>
+        <line num="34" type="stmt" count="5"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="38" type="stmt" count="5"/>
+        <line num="39" type="stmt" count="5"/>
+        <line num="42" type="stmt" count="5"/>
+        <line num="51" type="method" name="calculateAverage" visibility="private" complexity="2" crap="2" count="5"/>
+        <line num="53" type="stmt" count="5"/>
+        <line num="54" type="stmt" count="5"/>
+        <line num="55" type="stmt" count="5"/>
+        <line num="56" type="stmt" count="5"/>
+        <line num="59" type="stmt" count="5"/>
+        <metrics loc="60" ncloc="42" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="17" coveredelements="17"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Services/ReportsAggregatorProxy.php">
+        <class name="App\Services\ReportsAggregatorProxy" namespace="App\Services">
+          <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="14" coveredelements="14"/>
+        </class>
+        <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="33" type="method" name="average" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="36" type="stmt" count="5"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="40" type="stmt" count="4"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="45" type="method" name="cacheKey" visibility="private" complexity="1" crap="1" count="5"/>
+        <line num="47" type="stmt" count="5"/>
+        <line num="49" type="stmt" count="5"/>
+        <metrics loc="50" ncloc="38" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="14" coveredelements="14"/>
+      </file>
+    </package>
+    <package name="App\Services\Degrees">
+      <file name="/var/www/html/scribbr_test/app/Services/Degrees/AbstractDegree.php">
+        <class name="App\Services\Degrees\AbstractDegree" namespace="App\Services\Degrees">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="10" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="12" type="stmt" count="12"/>
+        <line num="13" type="stmt" count="12"/>
+        <metrics loc="13" ncloc="13" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Services/Degrees/Celsius.php">
+        <class name="App\Services\Degrees\Celsius" namespace="App\Services\Degrees">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        </class>
+        <line num="6" type="method" name="toCelsius" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="8" type="stmt" count="7"/>
+        <line num="11" type="method" name="toFahrenheit" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="13" type="stmt" count="2"/>
+        <metrics loc="14" ncloc="14" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/var/www/html/scribbr_test/app/Services/Degrees/Fahrenheit.php">
+        <class name="App\Services\Degrees\Fahrenheit" namespace="App\Services\Degrees">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        </class>
+        <line num="7" type="method" name="toCelsius" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="9" type="stmt" count="3"/>
+        <line num="12" type="method" name="toFahrenheit" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="14" type="stmt" count="3"/>
+        <metrics loc="15" ncloc="15" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <metrics files="39" loc="1412" ncloc="1072" classes="24" methods="59" coveredmethods="54" conditionals="0" coveredconditionals="0" statements="260" coveredstatements="248" elements="319" coveredelements="302"/>
+  </project>
+</coverage>
