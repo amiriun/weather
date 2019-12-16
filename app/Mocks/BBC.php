@@ -1,11 +1,11 @@
 <?php
 namespace App\Mocks;
 
-use App\Contracts\MockDataSourceInterface;
+use App\Contracts\DataSourceInterface;
 use Carbon\Carbon;
 use Psy\Util\Json;
 
-class BBCMock implements MockDataSourceInterface
+class BBC implements DataSourceInterface
 {
     private $date;
 

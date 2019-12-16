@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\DataContracts\DegreeItemDTO;
-use App\Mocks\BBCMock;
+use App\Mocks\BBC;
 use App\Services\Degrees\Fahrenheit;
 use Illuminate\Support\Arr;
 

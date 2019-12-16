@@ -8,11 +8,14 @@
 
 namespace Tests\Stubs;
 
+use App\Contracts\DataSourceInterface;
 use App\Contracts\WeatherRepositoryInterface;
 use App\DataContracts\DegreeItemDTO;
+use App\Repositories\AbstractWeatherRepository;
 use App\Services\Degrees\Celsius;
+use Carbon\Carbon;
 
-class FirstWeatherRepositoryStub implements WeatherRepositoryInterface
+class FirstWeatherRepositoryStub extends AbstractWeatherRepository implements WeatherRepositoryInterface
 {
     /**
      * @return DegreeItemDTO[]

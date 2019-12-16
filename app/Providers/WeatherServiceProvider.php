@@ -3,9 +3,9 @@
 namespace App\Providers;
 
 use App\Contracts\ReportsAggregatorInterface;
-use App\Mocks\AmsterdamMock;
-use App\Mocks\BBCMock;
-use App\Mocks\WeatherDotComMock;
+use App\Mocks\Amsterdam;
+use App\Mocks\BBC;
+use App\Mocks\WeatherDotCom;
 use App\Repositories\AmsterdamRepository;
 use App\Repositories\BBCRepository;
 use App\Repositories\WeatherDotComRepository;
@@ -67,7 +67,7 @@ class WeatherServiceProvider extends ServiceProvider
         $this->app->bind(
             'repository.bbc',
             function ($app, array $parameters = []) {
-                $bbcDataSource = new BBCMock($parameters[0], $parameters[1]);
+                $bbcDataSource = new BBC($parameters[0], $parameters[1]);
 
                 return new BBCRepository($parameters[0], $parameters[1], $bbcDataSource);
             }
@@ -75,7 +75,7 @@ class WeatherServiceProvider extends ServiceProvider
         $this->app->bind(
             'repository.weather_dot_com',
             function ($app, array $parameters = []) {
-                $weatherDotComDataSource = new WeatherDotComMock($parameters[0], $parameters[1]);
+                $weatherDotComDataSource = new WeatherDotCom($parameters[0], $parameters[1]);
 
                 return new WeatherDotComRepository($parameters[0], $parameters[1], $weatherDotComDataSource);
             }
@@ -83,7 +83,7 @@ class WeatherServiceProvider extends ServiceProvider
         $this->app->bind(
             'repository.amsterdam',
             function ($app, array $parameters = []) {
-                $amsterdamDataSource = new AmsterdamMock($parameters[0], $parameters[1]);
+                $amsterdamDataSource = new Amsterdam($parameters[0], $parameters[1]);
 
                 return new AmsterdamRepository($parameters[0], $parameters[1], $amsterdamDataSource);
             }

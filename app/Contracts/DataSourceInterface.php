@@ -1,7 +1,7 @@
 <?php
 namespace App\Contracts;
 
-interface MockDataSourceInterface
+interface DataSourceInterface
 {
     public function serveRawData();
 }

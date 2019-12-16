@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Contracts\MockDataSourceInterface;
+use App\Contracts\DataSourceInterface;
 use App\Contracts\WeatherRepositoryInterface;
 use Carbon\Carbon;
 
@@ -16,11 +16,11 @@ abstract class AbstractWeatherRepository  implements WeatherRepositoryInterface
     public $city;
 
     /**
-     * @var MockDataSourceInterface $dataSource
+     * @var DataSourceInterface $dataSource
      */
     protected $dataSource;
 
-    public function __construct(string $city, Carbon $date,MockDataSourceInterface $dataSource)
+    public function __construct(string $city, Carbon $date,DataSourceInterface $dataSource)
     {
         $this->date = $date;
         $this->city = $city;

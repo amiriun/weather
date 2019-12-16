@@ -2,10 +2,10 @@
 
 namespace App\Mocks;
 
-use App\Contracts\MockDataSourceInterface;
+use App\Contracts\DataSourceInterface;
 use Carbon\Carbon;
 
-class AmsterdamMock implements MockDataSourceInterface
+class Amsterdam implements DataSourceInterface
 {
     private $date;
 
