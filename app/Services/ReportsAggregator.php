@@ -56,6 +56,6 @@ class ReportsAggregator implements ReportsAggregatorInterface
             $sum = $sum + $item->degree->$method();
         }
 
-        return round($sum / count($items));
+        return $sum / count($items);
     }
 }

@@ -3,7 +3,7 @@ namespace App\Contracts;
 
 interface DegreeInterface
 {
-    public function toCelsius() : int;
+    public function toCelsius() : float;
 
-    public function toFahrenheit() : int;
+    public function toFahrenheit() : float;
 }
