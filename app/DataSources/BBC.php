@@ -36,47 +36,47 @@ class BBC implements DataSourceInterface
                 "prediction" => [
                     [
                         "time" => "00:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+0,
                     ],
                     [
                         "time" => "01:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+1
                     ],
                     [
                         "time" => "02:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+2
                     ],
                     [
                         "time" => "03:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+3
                     ],
                     [
                         "time" => "04:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+4
                     ],
                     [
                         "time" => "05:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+5
                     ],
                     [
                         "time" => "06:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+4
                     ],
                     [
                         "time" => "07:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+3
                     ],
                     [
                         "time" => "08:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+2
                     ],
                     [
                         "time" => "09:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+1
                     ],
                     [
                         "time" => "10:00",
-                        "value" => rand(24,31)
+                        "value" => $this->date->format('d')+2
                     ]
                 ]
             ]
