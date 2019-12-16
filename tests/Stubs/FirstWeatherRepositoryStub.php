@@ -12,7 +12,7 @@ use App\Contracts\WeatherRepositoryInterface;
 use App\DataContracts\DegreeItemDTO;
 use App\Services\Degrees\Celsius;
 
-class FakeWeatherRepositoryStub implements WeatherRepositoryInterface
+class FirstWeatherRepositoryStub implements WeatherRepositoryInterface
 {
     /**
      * @return DegreeItemDTO[]
@@ -23,7 +23,7 @@ class FakeWeatherRepositoryStub implements WeatherRepositoryInterface
         for($i=0; $i<=10;$i++){
             $DTO  = new DegreeItemDTO();
             $DTO->hour = $i;
-            $DTO->degree = new Celsius(1);
+            $DTO->degree = new Celsius(2);
 
             $DTOArray[] = $DTO;
         }

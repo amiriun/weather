@@ -48,7 +48,7 @@ class ReportsAggregator implements ReportsAggregatorInterface
      *
      * @return int
      */
-    private function calculateAverage($items,$degreeType) : int
+    private function calculateAverage($items,$degreeType) : float
     {
         $sum = 0;
         foreach ($items as $item) {
