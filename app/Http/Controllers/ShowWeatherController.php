@@ -26,13 +26,7 @@ class ShowWeatherController extends Controller
      */
     public function show($city){
         try {
-            $cacheTimeInMinute = 1;
-            $repositories = [
-                new BBCRepository($city, $this->DTO->date),
-                new WeatherDotComRepository($city, $this->DTO->date),
-                new AmsterdamRepository($city, $this->DTO->date),
-            ];
-            $reportAggregatorProxy = new ReportsAggregatorProxy($repositories, $cacheTimeInMinute);
+            $reportAggregatorProxy = app('reports_aggregator_proxy',[$city, $this->DTO->date]);
             $average = $reportAggregatorProxy->average($this->specifyDegreeType());
         } catch (\Exception $e) {
             abort(422,'Problem was occured');

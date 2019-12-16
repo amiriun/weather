@@ -32,7 +32,7 @@ class ReportsAggregatorProxy implements ReportsAggregatorInterface
      */
     public function average($degreeType): array
     {
-        $aggregator = new ReportsAggregator($this->repositories);
+        $aggregator = app(ReportsAggregatorInterface::class,$this->repositories);
         if (cache()->has($this->cacheKey())) {
             return cache($this->cacheKey());
         }
