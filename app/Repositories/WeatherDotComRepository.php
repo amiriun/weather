@@ -2,9 +2,6 @@
 namespace App\Repositories;
 
 use App\DataContracts\DegreeItemDTO;
-use App\Mocks\WeatherDotComMock;
-use App\Services\CSV;
-use App\Services\Degrees\Celsius;
 use Illuminate\Support\Arr;
 
 class WeatherDotComRepository extends AbstractWeatherRepository
@@ -35,7 +32,7 @@ class WeatherDotComRepository extends AbstractWeatherRepository
 
     private function collectDataFromCSV()
     {
-        $csv = (new CSV($this->rawData));
+        $csv = app('csv',[$this->rawData]);
         $this->dataArray = $csv->toArray();
     }
 
