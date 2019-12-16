@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\DataContracts\DegreeItemDTO;
 use App\Mocks\BBCMock;
 use App\Services\Degrees\Fahrenheit;
+use Illuminate\Support\Arr;
 
 class BBCRepository extends AbstractWeatherRepository
 {
@@ -31,7 +32,7 @@ class BBCRepository extends AbstractWeatherRepository
 
     private function getFromSource(): void
     {
-        $data = new BBCMock($this->city, $this->date);
+        $data = app('bbc_data_source',[$this->city,$this->date]);
         $this->rawData = $data->serveAsJson();
     }
 
@@ -50,7 +51,7 @@ class BBCRepository extends AbstractWeatherRepository
         foreach ($this->dataArray as $item){
             $DTO = new DegreeItemDTO();
             $DTO->hour = (int)str_replace(':00', '', $item->time);
-            $DTO->degree = new Fahrenheit($item->value);
+            $DTO->degree = app('bbc_default_degree_scale',Arr::wrap($item->value));
 
             $degreeItemDTO[] = $DTO;
         }

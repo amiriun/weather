@@ -4,6 +4,7 @@ namespace App\Repositories;
 use App\DataContracts\DegreeItemDTO;
 use App\Mocks\AmsterdamMock;
 use App\Services\Degrees\Celsius;
+use Illuminate\Support\Arr;
 
 class AmsterdamRepository extends AbstractWeatherRepository
 {
@@ -24,7 +25,7 @@ class AmsterdamRepository extends AbstractWeatherRepository
 
     private function getFromSource()
     {
-        $data = new AmsterdamMock($this->city, $this->date);
+        $data = app('amsterdam_data_source',[$this->city,$this->date]);
         $this->rawData = $data->serveAsXML();
     }
 
@@ -43,7 +44,7 @@ class AmsterdamRepository extends AbstractWeatherRepository
         foreach ($this->dataArray as $item){
             $DTO = new DegreeItemDTO();
             $DTO->hour = (int)str_replace(':00', '', (string)$item->time);
-            $DTO->degree = new Celsius((int)$item->value);
+            $DTO->degree = app('amsterdam_default_degree_scale',Arr::wrap((int)$item->value));
 
             $degreeItemDTO[] = $DTO;
         }

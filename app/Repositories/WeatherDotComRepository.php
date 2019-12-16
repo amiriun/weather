@@ -5,6 +5,7 @@ use App\DataContracts\DegreeItemDTO;
 use App\Mocks\WeatherDotComMock;
 use App\Services\CSV;
 use App\Services\Degrees\Celsius;
+use Illuminate\Support\Arr;
 
 class WeatherDotComRepository extends AbstractWeatherRepository
 {
@@ -28,7 +29,7 @@ class WeatherDotComRepository extends AbstractWeatherRepository
 
     private function getFromSource()
     {
-        $data = new WeatherDotComMock($this->city, $this->date);
+        $data = app('weather_dot_com_data_source',[$this->city,$this->date]);
         $this->rawData = $data->serveAsCSV();
     }
 
@@ -47,7 +48,7 @@ class WeatherDotComRepository extends AbstractWeatherRepository
         foreach ($this->dataArray as $item){
             $DTO = new DegreeItemDTO();
             $DTO->hour = (int)str_replace(':00', '', $item['prediction__time']);
-            $DTO->degree = new Celsius($item['prediction__value']);
+            $DTO->degree = app('weather_dot_com_default_degree_scale',Arr::wrap($item['prediction__value']));
 
             $degreeItemDTO[] = $DTO;
         }
