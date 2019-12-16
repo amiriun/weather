@@ -3,9 +3,9 @@
 namespace App\Providers;
 
 use App\Contracts\ReportsAggregatorInterface;
-use App\Mocks\Amsterdam;
-use App\Mocks\BBC;
-use App\Mocks\WeatherDotCom;
+use App\DataSources\Amsterdam;
+use App\DataSources\BBC;
+use App\DataSources\WeatherDotCom;
 use App\Repositories\AmsterdamRepository;
 use App\Repositories\BBCRepository;
 use App\Repositories\WeatherDotComRepository;

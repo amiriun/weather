@@ -1,5 +1,5 @@
 <?php
-namespace App\Mocks;
+namespace App\DataSources;
 
 use App\Contracts\DataSourceInterface;
 use Carbon\Carbon;

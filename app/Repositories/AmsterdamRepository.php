@@ -2,7 +2,7 @@
 namespace App\Repositories;
 
 use App\DataContracts\DegreeItemDTO;
-use App\Mocks\Amsterdam;
+use App\DataSources\Amsterdam;
 use App\Services\Degrees\Celsius;
 use Illuminate\Support\Arr;
 
