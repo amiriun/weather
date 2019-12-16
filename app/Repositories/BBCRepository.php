@@ -9,10 +9,6 @@ use Illuminate\Support\Arr;
 
 class BBCRepository extends AbstractWeatherRepository
 {
-    /**
-     * @var string
-     */
-    private $rawData;
 
     /**
      * @var array
@@ -24,21 +20,14 @@ class BBCRepository extends AbstractWeatherRepository
      */
     public function degreeOfDay(): array
     {
-        $this->getFromSource();
         $this->collectDataFromJson();
 
         return $this->decorateData();
     }
 
-    private function getFromSource(): void
-    {
-        $data = app('bbc_data_source',[$this->city,$this->date]);
-        $this->rawData = $data->serveAsJson();
-    }
-
     private function collectDataFromJson(): void
     {
-        $value = json_decode($this->rawData);
+        $value = json_decode($this->dataSource->serveRawData());
         $this->dataArray = $value->predictions->prediction;
     }
 

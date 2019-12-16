@@ -2,9 +2,10 @@
 
 namespace App\Mocks;
 
+use App\Contracts\MockDataSourceInterface;
 use Carbon\Carbon;
 
-class WeatherDotComMock
+class WeatherDotComMock implements MockDataSourceInterface
 {
     private $date;
 
@@ -19,7 +20,7 @@ class WeatherDotComMock
     /**
      * @return string
      */
-    public function serveAsCSV()
+    public function serveRawData()
     {
         return $this->getRawData();
     }

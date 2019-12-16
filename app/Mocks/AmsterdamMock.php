@@ -2,9 +2,10 @@
 
 namespace App\Mocks;
 
+use App\Contracts\MockDataSourceInterface;
 use Carbon\Carbon;
 
-class AmsterdamMock
+class AmsterdamMock implements MockDataSourceInterface
 {
     private $date;
 
@@ -19,7 +20,7 @@ class AmsterdamMock
     /**
      * @return string
      */
-    public function serveAsXML()
+    public function serveRawData()
     {
         return $this->getRawData();
     }

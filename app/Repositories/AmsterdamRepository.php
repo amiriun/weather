@@ -8,8 +8,6 @@ use Illuminate\Support\Arr;
 
 class AmsterdamRepository extends AbstractWeatherRepository
 {
-    private $rawData;
-
     private $dataArray;
 
     /**
@@ -17,21 +15,14 @@ class AmsterdamRepository extends AbstractWeatherRepository
      */
     public function degreeOfDay(): array
     {
-        $this->getFromSource();
         $this->collectDataFromXML();
 
         return $this->decorateData();
     }
 
-    private function getFromSource()
-    {
-        $data = app('amsterdam_data_source',[$this->city,$this->date]);
-        $this->rawData = $data->serveAsXML();
-    }
-
     private function collectDataFromXML()
     {
-        $decodedData = (array)simplexml_load_string($this->rawData);
+        $decodedData = (array)simplexml_load_string($this->dataSource->serveRawData());
         $this->dataArray = $decodedData['prediction'];
     }
 

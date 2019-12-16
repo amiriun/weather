@@ -25,19 +25,9 @@ class WeatherServiceProvider extends ServiceProvider
     public function register()
     {
         $this->providersDegreeScale();
-        $this->dataSources();
         $this->bindAggregatorClass();
         $this->bindRepositories();
         $this->bindReportAggregators();
-    }
-
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
     }
 
     private function providersDegreeScale(): void
@@ -62,28 +52,6 @@ class WeatherServiceProvider extends ServiceProvider
         );
     }
 
-    private function dataSources(): void
-    {
-        $this->app->bind(
-            'amsterdam_data_source',
-            function ($app, array $parameters = []) {
-                return new AmsterdamMock($parameters[0], $parameters[1]);
-            }
-        );
-        $this->app->bind(
-            'weather_dot_com_data_source',
-            function ($app, array $parameters = []) {
-                return new WeatherDotComMock($parameters[0], $parameters[1]);
-            }
-        );
-        $this->app->bind(
-            'bbc_data_source',
-            function ($app, array $parameters = []) {
-                return new BBCMock($parameters[0], $parameters[1]);
-            }
-        );
-    }
-
     private function bindAggregatorClass(): void
     {
         $this->app->bind(
@@ -99,19 +67,25 @@ class WeatherServiceProvider extends ServiceProvider
         $this->app->bind(
             'bbc_repository',
             function ($app, array $parameters = []) {
-                return new BBCRepository($parameters[0],$parameters[1]);
+                $bbcDataSource = new BBCMock($parameters[0], $parameters[1]);
+
+                return new BBCRepository($parameters[0], $parameters[1], $bbcDataSource);
             }
         );
         $this->app->bind(
             'weather_dot_com_repository',
             function ($app, array $parameters = []) {
-                return new WeatherDotComRepository($parameters[0],$parameters[1]);
+                $weatherDotComDataSource = new WeatherDotComMock($parameters[0], $parameters[1]);
+
+                return new WeatherDotComRepository($parameters[0], $parameters[1], $weatherDotComDataSource);
             }
         );
         $this->app->bind(
             'amsterdam_repository',
             function ($app, array $parameters = []) {
-                return new AmsterdamRepository($parameters[0],$parameters[1]);
+                $amsterdamDataSource = new AmsterdamMock($parameters[0], $parameters[1]);
+
+                return new AmsterdamRepository($parameters[0], $parameters[1], $amsterdamDataSource);
             }
         );
     }
@@ -130,13 +104,22 @@ class WeatherServiceProvider extends ServiceProvider
             function ($app, array $parameters = []) {
                 $cacheTimeInMinute = config('weather.cache_time_in_minutes');
                 $repositories = [
-                    app('bbc_repository',$parameters),
-                    app('weather_dot_com_repository',$parameters),
-                    app('amsterdam_repository',$parameters),
+                    app('bbc_repository', $parameters),
+                    app('weather_dot_com_repository', $parameters),
+                    app('amsterdam_repository', $parameters),
                 ];
 
                 return new ReportsAggregatorProxy($repositories, $cacheTimeInMinute);
             }
         );
+    }
+
+    /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
     }
 }

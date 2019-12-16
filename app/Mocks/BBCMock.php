@@ -1,10 +1,11 @@
 <?php
 namespace App\Mocks;
 
+use App\Contracts\MockDataSourceInterface;
 use Carbon\Carbon;
 use Psy\Util\Json;
 
-class BBCMock
+class BBCMock implements MockDataSourceInterface
 {
     private $date;
 
@@ -19,7 +20,7 @@ class BBCMock
     /**
      * @return string
      */
-    public function serveAsJson(){
+    public function serveRawData(){
         return Json::encode($this->getArrayData());
     }
 

@@ -6,8 +6,6 @@ use Illuminate\Support\Arr;
 
 class WeatherDotComRepository extends AbstractWeatherRepository
 {
-    private $rawData;
-
     /**
      * @var array
      */
@@ -18,21 +16,14 @@ class WeatherDotComRepository extends AbstractWeatherRepository
      */
     public function degreeOfDay(): array
     {
-        $this->getFromSource();
         $this->collectDataFromCSV();
 
         return $this->decorateData();
     }
 
-    private function getFromSource()
-    {
-        $data = app('weather_dot_com_data_source',[$this->city,$this->date]);
-        $this->rawData = $data->serveAsCSV();
-    }
-
     private function collectDataFromCSV()
     {
-        $csv = app('csv',[$this->rawData]);
+        $csv = app('csv',[$this->dataSource->serveRawData()]);
         $this->dataArray = $csv->toArray();
     }
 
