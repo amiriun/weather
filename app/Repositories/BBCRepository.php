@@ -40,7 +40,7 @@ class BBCRepository extends AbstractWeatherRepository
         foreach ($this->dataArray as $item){
             $DTO = new DegreeItemDTO();
             $DTO->hour = (int)str_replace(':00', '', $item->time);
-            $DTO->degree = app('bbc_default_degree_scale',Arr::wrap($item->value));
+            $DTO->degree = app('degree_scale.bbc',Arr::wrap($item->value));
 
             $degreeItemDTO[] = $DTO;
         }

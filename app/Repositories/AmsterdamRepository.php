@@ -35,7 +35,7 @@ class AmsterdamRepository extends AbstractWeatherRepository
         foreach ($this->dataArray as $item){
             $DTO = new DegreeItemDTO();
             $DTO->hour = (int)str_replace(':00', '', (string)$item->time);
-            $DTO->degree = app('amsterdam_default_degree_scale',Arr::wrap((int)$item->value));
+            $DTO->degree = app('degree_scale.amsterdam',Arr::wrap((int)$item->value));
 
             $degreeItemDTO[] = $DTO;
         }

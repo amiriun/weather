@@ -24,28 +24,28 @@ class WeatherServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->providersDegreeScale();
+        $this->bindDegreeScales();
         $this->bindAggregatorClass();
         $this->bindRepositories();
         $this->bindReportAggregators();
     }
 
-    private function providersDegreeScale(): void
+    private function bindDegreeScales(): void
     {
         $this->app->bind(
-            'bbc_default_degree_scale',
+            'degree_scale.bbc',
             function ($app, array $parameters = []) {
                 return new Fahrenheit($parameters[0]);
             }
         );
         $this->app->bind(
-            'weather_dot_com_default_degree_scale',
+            'degree_scale.weather_dot_com',
             function ($app, array $parameters = []) {
                 return new Celsius($parameters[0]);
             }
         );
         $this->app->bind(
-            'amsterdam_default_degree_scale',
+            'degree_scale.amsterdam',
             function ($app, array $parameters = []) {
                 return new Celsius($parameters[0]);
             }
@@ -65,7 +65,7 @@ class WeatherServiceProvider extends ServiceProvider
     private function bindRepositories()
     {
         $this->app->bind(
-            'bbc_repository',
+            'repository.bbc',
             function ($app, array $parameters = []) {
                 $bbcDataSource = new BBCMock($parameters[0], $parameters[1]);
 
@@ -73,7 +73,7 @@ class WeatherServiceProvider extends ServiceProvider
             }
         );
         $this->app->bind(
-            'weather_dot_com_repository',
+            'repository.weather_dot_com',
             function ($app, array $parameters = []) {
                 $weatherDotComDataSource = new WeatherDotComMock($parameters[0], $parameters[1]);
 
@@ -81,7 +81,7 @@ class WeatherServiceProvider extends ServiceProvider
             }
         );
         $this->app->bind(
-            'amsterdam_repository',
+            'repository.amsterdam',
             function ($app, array $parameters = []) {
                 $amsterdamDataSource = new AmsterdamMock($parameters[0], $parameters[1]);
 
@@ -104,9 +104,9 @@ class WeatherServiceProvider extends ServiceProvider
             function ($app, array $parameters = []) {
                 $cacheTimeInMinute = config('weather.cache_time_in_minutes');
                 $repositories = [
-                    app('bbc_repository', $parameters),
-                    app('weather_dot_com_repository', $parameters),
-                    app('amsterdam_repository', $parameters),
+                    app('repository.bbc', $parameters),
+                    app('repository.weather_dot_com', $parameters),
+                    app('repository.amsterdam', $parameters),
                 ];
 
                 return new ReportsAggregatorProxy($repositories, $cacheTimeInMinute);

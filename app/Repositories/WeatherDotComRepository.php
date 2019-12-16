@@ -36,7 +36,7 @@ class WeatherDotComRepository extends AbstractWeatherRepository
         foreach ($this->dataArray as $item){
             $DTO = new DegreeItemDTO();
             $DTO->hour = (int)str_replace(':00', '', $item['prediction__time']);
-            $DTO->degree = app('weather_dot_com_default_degree_scale',Arr::wrap($item['prediction__value']));
+            $DTO->degree = app('degree_scale.weather_dot_com',Arr::wrap($item['prediction__value']));
 
             $degreeItemDTO[] = $DTO;
         }
