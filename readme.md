@@ -18,15 +18,16 @@ First run bellow commands in your terminal:
 
 **Then open the following url:**
 
-http://localhost:8000/api/v_1_0/en/weather/Amsterdam?degree_type=celsius&date=2019-12-15
+`http://localhost:8000/api/v_1_0/en/weather/Amsterdam?degree_type=celsius&date=2019-12-25`
 
-
-
-
+-------------------------------
 
 **Notes:**
-- I used fileCache for caching data for a minute.
+- I used fileCache for caching data during period of time
 
-- The test coverage statistics can accessable in this address:
+- The test coverage statistics can accessable in the following address:
 
-tests/_reports/coverage/index.html
+`project_path/tests/_reports/coverage/index.html`
+
+- for running unit tests you can run following command:
+`php ./vendor/bin/phpunit `
