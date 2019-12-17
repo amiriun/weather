@@ -18,7 +18,7 @@ class ShowWeatherTransformer extends JsonResource
         foreach ($this->resource as $hour => $temperature) {
             $items[] = [
                 'hour' => $this->humanReadableHour($hour),
-                'temperature' => $temperature,
+                'temperature' => number_format($temperature, 1, '.', ''),
             ];
         }
 
