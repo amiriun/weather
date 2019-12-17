@@ -26,3 +26,7 @@ http://localhost:8000/api/v_1_0/en/weather/Amsterdam?degree_type=celsius&date=20
 
 **Notes:**
 - I used fileCache for caching data for a minute.
+
+- The test coverage statistics can accessable in this address:
+
+tests/_reports/coverage/index.html
