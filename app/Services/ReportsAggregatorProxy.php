@@ -33,19 +33,19 @@ class ReportsAggregatorProxy implements ReportsAggregatorInterface
     public function average($degreeType): array
     {
         $aggregator = app(ReportsAggregatorInterface::class,$this->repositories);
-        if (cache()->has($this->cacheKey())) {
-            return cache($this->cacheKey());
+        if (cache()->has($this->cacheKey($degreeType))) {
+            return cache($this->cacheKey($degreeType));
         }
         $average = $aggregator->average($degreeType);
-        cache()->put($this->cacheKey(), $average, $this->cacheInMinutes*60);
+        cache()->put($this->cacheKey($degreeType), $average, $this->cacheInMinutes*60);
 
         return $average;
     }
 
-    private function cacheKey()
+    private function cacheKey($degreeType)
     {
         $getOneRepository = Arr::first($this->repositories);
 
-        return "{$getOneRepository->date->timestamp}_{$getOneRepository->city}_{$this->cacheInMinutes}";
+        return "{$degreeType}_{$getOneRepository->date->timestamp}_{$getOneRepository->city}_{$this->cacheInMinutes}";
     }
 }
