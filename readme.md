@@ -25,7 +25,7 @@ First run bellow commands in your terminal:
 **Notes:**
 - I used fileCache for caching data during period of time
 
-- The test coverage statistics can accessable in the following address:
+- The test coverage statistics results can accessable in the following address:
 
 `project_path/tests/_reports/coverage/index.html`
 
